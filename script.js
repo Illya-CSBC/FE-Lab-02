@@ -12,7 +12,9 @@ console.log(whoami("Ukraine"))
 console.log(whoami("Illya", 2005))
 
 task_numerating("Task 03")
+task_numerating("Task 04");
 
+// Task 03
 class Human {
   constructor(name, age, weight, gender) {
     this.name = name;
@@ -21,6 +23,7 @@ class Human {
     this.gender = gender;
   }
 
+// Task 04
   getInfo(prop) {
     return !prop
       ? {
@@ -46,7 +49,7 @@ console.log(`Gender: ${human1.getInfo("gender")}`);
 
 console.log(`greeting(): ${human1.greeting()}`)
 
-task_numerating("Task 04")
+task_numerating("Task 05")
 
 class Man extends Human {
   constructor(name, age, weight) {

@@ -37,11 +37,39 @@ class Human {
   }
 }
 
-let illya = new Human("Illya", 18, 81, "male")
-console.log(`Null: ${illya.getInfo()}`);
-console.log(`Name: ${illya.getInfo("name")}`);
-console.log(`Age: ${illya.getInfo("age")}`);
-console.log(`Weight: ${illya.getInfo("weight")}`);
-console.log(`Gender: ${illya.getInfo("gender")}`);
+let human1 = new Human("Petro", 21, 90, "male")
+console.log(`Null: ${human1.getInfo()}`);
+console.log(`Name: ${human1.getInfo("name")}`);
+console.log(`Age: ${human1.getInfo("age")}`);
+console.log(`Weight: ${human1.getInfo("weight")}`);
+console.log(`Gender: ${human1.getInfo("gender")}`);
 
-console.log(`greeting(): ${illya.greeting()}`)
+console.log(`greeting(): ${human1.greeting()}`)
+
+task_numerating("Task 04")
+
+class Man extends Human {
+  constructor(name, age, weight) {
+    super(name, age, weight, "man");
+  }
+
+  greeting() {
+    return `Hi! My name is ${this.name}! I'm ${this.age}!`;
+  }
+}
+
+class Woman extends Human {
+  constructor(name, age, weight) {
+    super(name, age, weight, "woman");
+  }
+
+  greeting() {
+    return `Hi! My name is ${this.name}!`;
+  }
+}
+
+let man1 = new Man("Illya", 18, 81)
+console.log(`Petro greeting(): ${man1.greeting()}`);
+
+let woman1 = new Man("Kris", 18, 52)
+console.log(`Petro greeting(): ${woman1.greeting()}`);

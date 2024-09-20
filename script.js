@@ -74,5 +74,5 @@ class Woman extends Human {
 let man1 = new Man("Illya", 18, 81)
 console.log(`Petro greeting(): ${man1.greeting()}`);
 
-let woman1 = new Man("Kris", 18, 52)
+let woman1 = new Woman("Kris", 18, 52)
 console.log(`Petro greeting(): ${woman1.greeting()}`);

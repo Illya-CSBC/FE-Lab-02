@@ -7,3 +7,12 @@ const whoami = (name, year_of_birth = 1991) => {
 
 console.log(whoami("Ukraine"))
 console.log(whoami("Illya", 2005))
+
+class Human {
+  constructor(name, age, weight, gender) {
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+    this.gender = gender;
+  }
+}

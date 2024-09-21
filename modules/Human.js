@@ -8,14 +8,14 @@ export default class Human {
 
 // Task 04
   getInfo(prop) {
-    return !prop
+    return (prop === null
       ? {
         name: this.name,
         age: this.age,
         weight: this.weight,
         gender: this.gender,
       }
-      : this[prop];
+      : `Name: ${this.name}; Age: ${this.age}; Weight: ${this.weight}; Gender: ${this.gender}`);
   }
 
   greeting() {

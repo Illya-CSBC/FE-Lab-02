@@ -1,21 +1,21 @@
-import task_numerating from "./modules/task_numerating.js";
+import taskNumerating from "./modules/taskNumerating.js";
 import Human from "./modules/Human.js";
 import Man from "./modules/Man.js";
 import Woman from "./modules/Woman.js";
+import generateHuman from "./modules/generateHuman.js";
 
-task_numerating("Task 02");
+taskNumerating("Task 02");
 
 const NOW_YEAR = new Date().getFullYear();
 
-const whoami = (name, year_of_birth = 1991) => {
-  return `Я ${name}, мені ${NOW_YEAR - year_of_birth} років`;
+const whoami = (name, yearOfBirth = 1991) => {
+  return `Я ${name}, мені ${NOW_YEAR - yearOfBirth} років`;
 }
 
 console.log(whoami("Ukraine"))
 console.log(whoami("Illya", 2005))
 
-task_numerating("Task 03")
-task_numerating("Task 04");
+taskNumerating("Task 03 && Task 04");
 
 let human1 = new Human("Petro", 21, 90, "male")
 console.log(`Null: ${human1.getInfo()}`);
@@ -26,10 +26,21 @@ console.log(`Gender: ${human1.getInfo("gender")}`);
 
 console.log(`greeting(): ${human1.greeting()}`)
 
-task_numerating("Task 05")
+taskNumerating("Task 05")
 
 let man1 = new Man("Illya", 18, 81)
 console.log(`Petro greeting(): ${man1.greeting()}`);
 
 let woman1 = new Woman("Kris", 18, 52)
 console.log(`Petro greeting(): ${woman1.greeting()}`);
+
+taskNumerating("Task 06")
+
+let people = []
+for (let i = 0; i < 15; i++) {
+  people.push(generateHuman());
+}
+
+people.forEach(person => {
+  console.log(`Person: ${person.getInfo()}`);
+})

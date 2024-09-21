@@ -12,7 +12,7 @@ export default function generateHuman() {
     : new Woman(
       generateName("female"),
       generateNum(18, 80),
-      generateNum(50, 180)
+      generateNum(40, 100)
     )
   )
 }

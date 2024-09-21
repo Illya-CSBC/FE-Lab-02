@@ -3,6 +3,7 @@ import Human from "./modules/Human.js";
 import Man from "./modules/Man.js";
 import Woman from "./modules/Woman.js";
 import generateHuman from "./modules/generateHuman.js";
+import findHuman from "./modules/findHuman.js";
 
 taskNumerating("Task 02");
 
@@ -44,3 +45,9 @@ for (let i = 0; i < 15; i++) {
 people.forEach(person => {
   console.log(`Person: ${person.getInfo()}`);
 })
+
+taskNumerating("Task 07")
+
+findHuman(people, "name", "Illya")
+.then(person => console.log(person))
+.catch((err) => console.log(err))

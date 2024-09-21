@@ -1,4 +1,4 @@
-export default function search(list, searchField, searchValue) {
+export default function findHuman(list, searchField, searchValue) {
   const delay = 500
 
   return new Promise((resolve, reject) => {

@@ -1,20 +1,24 @@
 import Man from "./Man.js";
 import Woman from "./Woman.js";
 
-export default function generateHuman() {
-  return (
-    Math.random() > 0.5
-    ? new Man(
-      generateName("male"),
-      generateNum(18, 80),
-      generateNum(50, 180)
+export default function generateHuman(count) {
+  const array = []
+  for (let i = 0; i < count; i++) {
+    array.push(
+      Math.random() > 0.5
+        ? new Man(
+          generateName("male"),
+          generateNum(18, 80),
+          generateNum(50, 180)
+        )
+        : new Woman(
+          generateName("female"),
+          generateNum(18, 80),
+          generateNum(40, 100)
+        )
     )
-    : new Woman(
-      generateName("female"),
-      generateNum(18, 80),
-      generateNum(40, 100)
-    )
-  )
+  }
+  return array
 }
 
 
@@ -52,6 +56,6 @@ function generateName(gender) {
   )
 }
 
-export function generateNum(min, max) {
+function generateNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }

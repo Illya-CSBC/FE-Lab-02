@@ -37,10 +37,7 @@ console.log(`Petro greeting(): ${woman1.greeting()}`);
 
 taskNumerating("Task 06")
 
-let people = []
-for (let i = 0; i < 15; i++) {
-  people.push(generateHuman());
-}
+const people = generateHuman(1);
 
 people.forEach(person => {
   console.log(`Person: ${person.getInfo()}`);

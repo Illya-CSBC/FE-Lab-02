@@ -7,17 +7,21 @@ export default class Human {
   }
 
 // Task 04
-  getInfo(prop) {
-    return (prop === null
-      ? {
-        name: this.name,
-        age: this.age,
-        weight: this.weight,
-        gender: this.gender,
-      }
-      : `Name: ${this.name}; Age: ${this.age}; Weight: ${this.weight}; Gender: ${this.gender}`);
-  }
+  getInfo(prop = null) {
+    console.log(prop)
+    if (prop === null) {
+      console.log('isNull')
+      return `Name: ${this.name}; Age: ${this.age}; Weight: ${this.weight}; Gender: ${this.gender}`
 
+    } else {
+      return !prop ? {
+          name: this.name,
+          age: this.age,
+          weight: this.weight,
+          gender: this.gender,
+        } : this[prop]
+    }
+  }
   greeting() {
     return "Hi!"
   }
